@@ -27,7 +27,7 @@ You (the orchestrator) delegate implementation to Grok, then **evaluate how well
    - **Seams** -- edge cases where new code meets existing code.
    - **Tests** -- do they assert behavior, or just exist / assert trivially?
    - **Unsupported claims** -- anything Grok says it did that the diff doesn't show.
-4. **Run the gates.** `bun run type-check` at repo root (or `bun run typecheck` in each affected package) + relevant tests (frontend Jest / backend Vitest). Green before commit -- non-negotiable.
+4. **Run the gates.** Use the repository's documented checks for the affected code: typecheck, lint, tests, build, migration checks, or other project-specific validation. Green before commit -- non-negotiable.
 5. **Escalate high-stakes.** Auth, data, money, or migration diffs -> get an independent review (`codex` CLI or `/code-review`) **in parallel with your own**, before committing. Two engines, neither seeing the other's findings first.
 6. **Accept or reject.**
    - **Pass** -> commit with explicit `git add <files>`; summarize the task; drop the full diff from working context.
