@@ -7,9 +7,27 @@ The skill teaches the orchestrator to write a tight delegation spec, call `/grok
 ## Requirements
 
 - Claude Code with skill support.
-- A working `/grok:rescue` command from your Grok Claude plugin or equivalent local setup.
+- A working `/grok:rescue` command, typically installed via Vasi Hemanth's [grok-build-plugin](https://github.com/VasiHemanth/grok-build-plugin).
 
 ## Install
+
+### As a Claude Code Plugin
+
+Add the ThirdWag marketplace, then install the plugin:
+
+```text
+/plugin marketplace add ThirdWag/delegate-coding-to-grok
+/plugin install delegate-coding-to-grok@thirdwag-skills
+/reload-plugins
+```
+
+Then invoke the namespaced skill:
+
+```text
+/delegate-coding-to-grok:delegate
+```
+
+### As a Standalone Skill
 
 Clone the repository and run the installer:
 
@@ -35,11 +53,18 @@ Restart Claude Code if it was already running, then invoke:
 ## Repository Layout
 
 ```text
+.claude-plugin/marketplace.json
+plugins/delegate-coding-to-grok/.claude-plugin/plugin.json
+plugins/delegate-coding-to-grok/skills/delegate/SKILL.md
 skills/delegate-coding-to-grok/SKILL.md
 ```
 
-This is a standalone skill, not a Claude Code plugin. It does not bundle API keys, credentials, or Grok configuration.
+This repository supports both Claude Code plugin installation and standalone skill installation. It does not bundle API keys, credentials, or Grok configuration.
 
-## Acknowledgements
+## Compatibility and Acknowledgements
 
-This skill was inspired by the Grok delegation workflow enabled by Vasi Hemanth's [grok-build-plugin](https://github.com/VasiHemanth/grok-build-plugin), which provides Claude Code commands such as `/grok:rescue`.
+This skill is designed as a workflow layer for users of Vasi Hemanth's [grok-build-plugin](https://github.com/VasiHemanth/grok-build-plugin), which provides the `/grok:rescue` Claude Code command used by this skill.
+
+No source code from `grok-build-plugin` is included in this repository. The plugin is licensed separately under Apache-2.0. This project remains MIT licensed.
+
+This project is independent and is not affiliated with or endorsed by Vasi Hemanth, xAI, Anthropic, or the Grok Build project.

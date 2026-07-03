@@ -1,0 +1,11 @@
+{
+  "name": "delegate-coding-to-grok",
+  "description": "Adds a workflow skill for delegating non-trivial coding tasks to Grok and reviewing the resulting diff before commit.",
+  "version": "0.1.0",
+  "author": {
+    "name": "ThirdWag"
+  },
+  "homepage": "https://github.com/ThirdWag/delegate-coding-to-grok",
+  "repository": "https://github.com/ThirdWag/delegate-coding-to-grok",
+  "license": "MIT"
+}

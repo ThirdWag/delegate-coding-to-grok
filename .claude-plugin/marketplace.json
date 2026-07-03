@@ -1,0 +1,24 @@
+{
+  "name": "thirdwag-skills",
+  "owner": {
+    "name": "ThirdWag"
+  },
+  "description": "Claude Code skills published by ThirdWag.",
+  "plugins": [
+    {
+      "name": "delegate-coding-to-grok",
+      "source": "./plugins/delegate-coding-to-grok",
+      "displayName": "Delegate Coding to Grok",
+      "description": "Adds a workflow skill for delegating non-trivial coding tasks to Grok and reviewing the resulting diff before commit.",
+      "version": "0.1.0",
+      "author": {
+        "name": "ThirdWag"
+      },
+      "homepage": "https://github.com/ThirdWag/delegate-coding-to-grok",
+      "repository": "https://github.com/ThirdWag/delegate-coding-to-grok",
+      "license": "MIT",
+      "category": "Development",
+      "tags": ["grok", "delegation", "coding", "review"]
+    }
+  ]
+}
