@@ -12,11 +12,15 @@ jobs:
       - name: Validate skill package
         run: |
           test -f skills/delegate-coding-to-grok/SKILL.md
+          test -f skills/delegate-coding-to-grok-doctor/SKILL.md
           test -f plugins/delegate-coding-to-grok/skills/delegate/SKILL.md
+          test -f plugins/delegate-coding-to-grok/skills/doctor/SKILL.md
           test -f plugins/delegate-coding-to-grok/.claude-plugin/plugin.json
           test -f .claude-plugin/marketplace.json
           grep -q '^name: delegate-coding-to-grok$' skills/delegate-coding-to-grok/SKILL.md
+          grep -q '^name: delegate-coding-to-grok-doctor$' skills/delegate-coding-to-grok-doctor/SKILL.md
           grep -q '^name: delegate$' plugins/delegate-coding-to-grok/skills/delegate/SKILL.md
+          grep -q '^name: doctor$' plugins/delegate-coding-to-grok/skills/doctor/SKILL.md
           grep -q '^description: ' skills/delegate-coding-to-grok/SKILL.md
           cmp \
             <(tail -n +5 skills/delegate-coding-to-grok/SKILL.md) \

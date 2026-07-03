@@ -27,6 +27,12 @@ Then invoke the namespaced skill:
 /delegate-coding-to-grok:delegate
 ```
 
+To check the Grok dependency first:
+
+```text
+/delegate-coding-to-grok:doctor
+```
+
 ### As a Standalone Skill
 
 Clone the repository and run the installer:
@@ -50,13 +56,21 @@ Restart Claude Code if it was already running, then invoke:
 /delegate-coding-to-grok
 ```
 
+To check the Grok dependency first:
+
+```text
+/delegate-coding-to-grok-doctor
+```
+
 ## Repository Layout
 
 ```text
 .claude-plugin/marketplace.json
 plugins/delegate-coding-to-grok/.claude-plugin/plugin.json
 plugins/delegate-coding-to-grok/skills/delegate/SKILL.md
+plugins/delegate-coding-to-grok/skills/doctor/SKILL.md
 skills/delegate-coding-to-grok/SKILL.md
+skills/delegate-coding-to-grok-doctor/SKILL.md
 ```
 
 This repository supports both Claude Code plugin installation and standalone skill installation. It does not bundle API keys, credentials, or Grok configuration.
