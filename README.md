@@ -39,3 +39,7 @@ skills/delegate-coding-to-grok/SKILL.md
 ```
 
 This is a standalone skill, not a Claude Code plugin. It does not bundle API keys, credentials, or Grok configuration.
+
+## Acknowledgements
+
+This skill was inspired by the Grok delegation workflow enabled by Vasi Hemanth's [grok-build-plugin](https://github.com/VasiHemanth/grok-build-plugin), which provides Claude Code commands such as `/grok:rescue`.
